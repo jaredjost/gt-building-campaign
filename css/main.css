@@ -90,6 +90,7 @@ nav a {
     text-decoration: none;
 }
 
+nav a,
 nav a:hover,
 nav a:visited {
     color: #bcbec1;
