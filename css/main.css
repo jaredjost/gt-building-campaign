@@ -4,7 +4,6 @@ html {
     color: black;
     font-size: 1em;
     line-height: 1.4;
-    text-transform: uppercase;
 }
 
 ::-moz-selection {
@@ -61,15 +60,6 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
-.header-container,
-.footer-container {
-    background: #edf4d5;
-    color: #bcbec1;
-}
 
 /* ==============
     MOBILE: Menu
@@ -105,11 +95,12 @@ nav a:hover {
    ============== */
 
 .main {
-	border-top: 5px solid gray;
+	border-top: 3px solid #b2b2b2;
 }
 
 .main article h1 {
     font-size: 2em;
+    margin:1em 0;
 }
 
 .footer-container footer {
@@ -118,7 +109,7 @@ nav a:hover {
 }
 
 .wrapper {
-	width: 98%;
+	width: 95%;
 	margin: 0 auto;
 }
 
@@ -127,10 +118,11 @@ nav a:hover {
    ========================================================================== */
 
 .banner-container {
-	margin: 15px 15px;
 	height: 250px;
-	background-color: #bcbec0;
+	background-color: #b2b2b2;
 	font: bold 25px serif;
+  margin-bottom: 1em;
+  margin-top: 70px;
 }
 
 .banner-left,
@@ -162,7 +154,7 @@ nav a:hover {
 	height: auto;
 	width: 200px;
 }
-
+/*
 #social-media-div {
 	width: 300px;
 	float: right;
@@ -177,7 +169,7 @@ nav a:hover {
 
 #social-media-div img {
 	margin: 0 10px;
-}
+}*/
 
 /* ==========================================================================
    Media Queries
@@ -343,4 +335,35 @@ nav a:hover {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container,
+.navbar-default,
+.footer-container {
+    background-color: #EFF6D1;
+    color: #b2b2b2;
+    font-size:11pt;
+    font-family: 'Karla', sans-serif;
+}
+
+.footer-container a {
+    color: #b2b2b2;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
