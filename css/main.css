@@ -58,7 +58,7 @@ textarea {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    font-size:12pt;
+    font-size:13pt;
     color:#333333;
 }
 
@@ -101,11 +101,17 @@ nav a:hover {
 }
 
 article {
-    border-top: 3px solid #b2b2b2;
+    border-top: 2px solid #b2b2b2;
 }
 
 #social-media-div article {
-  padding-top: 1.5em;
+  padding: 1.5em 0;
+}
+
+#social-media-div i {
+  color:#000;
+  margin:0 0.8em 0.4em;
+  font-size:1.3em;
 }
 
 .main article h1 {
@@ -359,12 +365,19 @@ article {
 .header-container,
 .navbar-default,
 .footer-container,
+.social-container,
 .donate-container {
     background-color: #EFF6D1;
     color: #b2b2b2;
     font-size:11pt;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
+}
+
+.social-container {
+  background-color: transparent;
+  text-align: center;
+  text-transform: none;
 }
 
 .footer-container a {
@@ -380,4 +393,13 @@ article {
 
 .navbar .navbar-collapse {
   text-align: center;
+}
+
+#news {
+  margin-bottom:0;
+}
+
+.main article .news-date {
+  color:#b2b2b2;
+  font-style: italic;
 }
