@@ -57,7 +57,9 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:12pt;
+    color:#333333;
 }
 
 
@@ -94,13 +96,23 @@ nav a:hover {
     MOBILE: Main
    ============== */
 
-.main {
-	border-top: 3px solid #b2b2b2;
+.main a {
+  color:#b2b2b2;
+}
+
+article {
+    border-top: 3px solid #b2b2b2;
+}
+
+#social-media-div article {
+  padding-top: 1.5em;
 }
 
 .main article h1 {
     font-size: 2em;
     margin:1em 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
 }
 
 .footer-container footer {
@@ -346,11 +358,13 @@ nav a:hover {
 
 .header-container,
 .navbar-default,
-.footer-container {
+.footer-container,
+.donate-container {
     background-color: #EFF6D1;
     color: #b2b2b2;
     font-size:11pt;
     font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
 }
 
 .footer-container a {
