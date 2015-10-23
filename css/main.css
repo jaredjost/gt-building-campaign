@@ -447,6 +447,10 @@ article {
   margin-bottom:1em;
 }
 
+.vision .fa-stack {
+  font-size: 20pt;
+}
+
 .vision-div h4 {
   text-transform: uppercase;
 }
