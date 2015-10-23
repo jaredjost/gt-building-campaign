@@ -104,6 +104,10 @@ article {
     border-top: 2px solid #b2b2b2;
 }
 
+.main article {
+  padding:0 1em;
+}
+
 #social-media-div {
 	float: right;
 }
