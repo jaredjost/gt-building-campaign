@@ -413,3 +413,30 @@ article {
   color:#b2b2b2;
   font-style: italic;
 }
+
+.inline {
+	display: inline-block;
+}
+
+#vision-div h2,
+#vision-div span,
+#vision-div ol>li {
+	text-transform: uppercase;
+	font-family: 'Montserret', sans-serif;
+	font-size:14pt;
+	color:#333333;
+}
+
+#vision-div span,
+#vision-div a {
+	color: #D4EB8D;
+}
+
+#vision-div ol>li,
+#vision-div span {
+	font-weight: semibold;
+}
+
+#vision-div ul {
+	list-style-type: square;
+}
