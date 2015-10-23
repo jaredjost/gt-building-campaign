@@ -69,9 +69,9 @@ Tumblr.RecentPosts = function(el, postsCount) {
 
   var renderPost = function(post) {
     var post_date = new Date(post.date.split(' ')[0]);
-    var date = '<span class="news-date">' + monthNames[post_date.getMonth()] + ' ' + post_date.getDate() + ', ' + post_date.getFullYear() + '</span><br />'
+    var date = '<span class="news-date">' + monthNames[post_date.getMonth()] + ' ' + post_date.getDate() + ', ' + post_date.getFullYear() + '</span><br /><br />'
 
-    var title = post.title ? '<h3 style="text-transform:uppercase">' + post.title + '</h3>' : '<br />';
+    var title = post.title ? '<h3 style="text-transform:uppercase">' + post.title + '</h3>' : '';
 
     var media = "";
     if(post.img || post.video || post.audio) {
