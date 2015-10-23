@@ -101,15 +101,16 @@ a {
 }
 
 article {
-    border-top: 2px solid #b2b2b2;
+    border-top: 2px solid #DDD;
 }
 
-#social-media-div {
-	float: right;
+.main article {
+  margin:10px 1em;
+  padding:0 1em;
 }
 
 #social-media-div article {
-  padding: 1.5em 0;
+  padding: 1.8em 0 1.6em;
 }
 
 #social-media-div i {
@@ -124,7 +125,7 @@ article {
 
 .main article h1 {
     font-size: 2em;
-    margin:1em 0;
+    margin:1.2em 0;
     font-family: 'Montserrat', sans-serif;
     color: #333333;
 }
@@ -144,10 +145,10 @@ article {
    ========================================================================== */
 
 .banner-container {
-	background-color: #ccc;
+	background-color: #EEE;
 	font: bold 25px serif;
   margin-bottom: 1em;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .banner-container .row>div {
