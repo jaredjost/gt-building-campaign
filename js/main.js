@@ -44,6 +44,9 @@ $(function() {
   OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+var monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+  "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+];
 
 var Tumblr = Tumblr || {};
 
@@ -57,8 +60,7 @@ Tumblr.RecentPosts = function(el, postsCount) {
     conversation: "conversation-title",
     video: "video-caption",
     audio: "audio-caption",
-    answer: "question",
-    body: "regular-body"
+    answer: "question"
   };
 
   var renderPosts = function(posts) {
@@ -66,8 +68,26 @@ Tumblr.RecentPosts = function(el, postsCount) {
   };
 
   var renderPost = function(post) {
-    // return "<li><a href='" + post.url + "'>" + post.title + "</a></li>";
-    return (post.img ? '<img src="' + post.img + '" /><br />' : "") + (post.body || post.caption || post.quote || post.lurl ? '<a href="' + post.lurl + '">' + post.link + '</a>' : post.chat) + ' <a href="' + post.url + '" class="news-date">READ MORE</a>';
+    var post_date = new Date(post.date.split(' ')[0]);
+    var date = '<span class="news-date">' + monthNames[post_date.getMonth()] + ' ' + post_date.getDate() + ', ' + post_date.getFullYear() + '</span><br /><br />'
+
+    var title = post.title ? '<h3 style="text-transform:uppercase">' + post.title + '</h3>' : '';
+
+    var media = "";
+    if(post.img || post.video || post.audio) {
+      media += post.img ? '<img src="' + post.img + '" /><br />' : "";
+      media += post.video ? post.videoplayer : "";
+      media += post.audio ? post.audioplayer : "";
+      media += "<br />";
+    }
+
+    var body = "";
+    body = post.body || post.quote || post.chat;
+    if(!body) {
+      body += post.lurl ? '<a href="' + post.lurl + '">' + post.link + '</a>' : "";
+    }
+
+    return date + title + media + body + ' <a href="' + post.url + '" class="news-date">READ MORE</a>';
   };
 
   var postInfo = function(post) {
@@ -77,12 +97,14 @@ Tumblr.RecentPosts = function(el, postsCount) {
         title: post[titleType],
         url: post["url-with-slug"],
         body: post["regular-body"],
-        caption: post["photo-caption"],
         img: post["photo-url-400"],
         quote: post["quote-text"],
         link: post["link-text"],
         lurl: post["link-url"],
-        chat: post["conversation-text"]
+        chat: post["conversation-text"],
+        videoplayer: post["video-player"],
+        audioplayer: post["audio-player"],
+        date: post["date-gmt"]
       };
     }
   };
@@ -91,6 +113,7 @@ Tumblr.RecentPosts = function(el, postsCount) {
     render: function() {
       var loadingEl = $("<div>").text("Loading...").appendTo($(el));
       $.getJSON(apiUrl, function(data) {
+        console.log(data);
         loadingEl.remove();
         $("<p>").appendTo($(el)).hide().append(renderPosts(data.posts)).slideDown('slow');
       });
