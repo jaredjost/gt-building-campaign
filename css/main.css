@@ -423,7 +423,7 @@ article {
 .vision-div ol>li {
 	text-transform: uppercase;
 	font-family: 'Montserret', sans-serif;
-	font-size:13pt;
+	/*font-size:13pt;*/
 	color:#333333;
 }
 
@@ -434,7 +434,7 @@ article {
 
 .vision-div ol>li,
 .vision-div span {
-	font-weight: semibold;
+	/*font-weight: semibold;*/
 }
 
 .vision-div ul {
@@ -453,4 +453,21 @@ article {
 
 .vision-div h4 {
   text-transform: uppercase;
+}
+
+.building {
+  padding: 1.8em 0;
+  margin-bottom:1em;
+  text-align:left;
+  /*background:#EEE;*/
+  overflow: hidden;
+}
+
+.legal {
+  font-size:10pt;
+  color:#AAA;
+}
+
+.main h4 {
+  margin-top:25px;
 }

@@ -86,9 +86,9 @@ Tumblr.RecentPosts = function(el, postsCount) {
     if(!body) {
       body += post.lurl ? '<a href="' + post.lurl + '">' + post.link + '</a>' : "";
     }
-    body = body.split(' ', 20).join(' ') + '... ';
+    body = body.split(' ', 50).join(' ') + '... ';
 
-    return date + title + media + body + '<a href="' + post.url + '" class="news-date">READ MORE</a>';
+    return '<p>' + date + title + media + body + '</p><span><a href="' + post.url + '" class="pull-right">READ MORE &#10095;</a></span>';
   };
 
   var postInfo = function(post) {
@@ -116,7 +116,7 @@ Tumblr.RecentPosts = function(el, postsCount) {
       $.getJSON(apiUrl, function(data) {
         console.log(data);
         loadingEl.remove();
-        $("<p>").appendTo($(el)).hide().append(renderPosts(data.posts)).slideDown('slow');
+        $("<div>").appendTo($(el)).hide().append(renderPosts(data.posts)).slideDown('slow');
       });
 
       return this;
