@@ -58,7 +58,7 @@ textarea {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    font-size:13pt;
+    font-size:12pt;
     color:#333333;
 }
 
@@ -418,25 +418,39 @@ article {
 	display: inline-block;
 }
 
-#vision-div h2,
-#vision-div span,
-#vision-div ol>li {
+.vision-div h2,
+.vision-div span,
+.vision-div ol>li {
 	text-transform: uppercase;
 	font-family: 'Montserret', sans-serif;
-	font-size:14pt;
+	font-size:13pt;
 	color:#333333;
 }
 
-#vision-div span,
-#vision-div a {
-	color: #D4EB8D;
+.vision-div span,
+.vision-div a {
+	color: #B8CB80;
 }
 
-#vision-div ol>li,
-#vision-div span {
+.vision-div ol>li,
+.vision-div span {
 	font-weight: semibold;
 }
 
-#vision-div ul {
+.vision-div ul {
 	list-style-type: square;
+}
+.vision {
+  text-align: center;
+  background: #EEE;
+  padding: 1.8em 0;
+  margin-bottom:1em;
+}
+
+.vision .fa-stack {
+  font-size: 20pt;
+}
+
+.vision-div h4 {
+  text-transform: uppercase;
 }
