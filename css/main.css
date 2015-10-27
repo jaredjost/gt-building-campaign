@@ -523,8 +523,8 @@ article.intro {
 }
 
 .commitment-form article {
-  padding: 1em 0;
-  margin-top: 1em;
+  padding: 2em 0 1em;
+  margin-top: 2em;
 }
 
 .commitment-form .ss-required-asterisk {
