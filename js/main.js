@@ -125,3 +125,14 @@ Tumblr.RecentPosts = function(el, postsCount) {
 };
 
 Tumblr.RecentPosts($("#tumblr-post")).render();
+
+$("#totalCommit").blur(function(){
+  $("#commit-collaposed").slideDown();
+  $('#ss-submit').val("Submit");
+})
+
+$('#ss-submit').click(function(){
+  $("#commit-collaposed").slideDown();
+  $('#ss-submit').val("Submit");
+
+})
