@@ -74,7 +74,7 @@ nav ul {
 }
 
 nav li {
-	margin: 0 30px;
+	margin: 0 20px;
 	display: inline-block;
 }
 
@@ -202,6 +202,15 @@ article.intro {
 label {
   display:block;
 }
+
+.commitment-form input[type=text] {
+  width: 100%;
+  margin-bottom: 10px
+}
+
+.commitment-form .ss-required-asterisk {
+  display:none;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -232,18 +241,29 @@ label {
         margin: 0 0.7%;
     }
 
-.main article {
-  padding:0 1em;
-}
+    .main article {
+      padding:0 1em;
+    }
 
-.commitment-form article .ss-q-title {
-  width: 80px;
-  text-align: right;
-  padding-right: 5px;
-}
-label {
-  display:inline-block;
-}
+    .commitment-form article .ss-q-title {
+      width: 80px;
+      text-align: right;
+      padding-right: 5px;
+    }
+    label {
+      display:inline-block;
+    }
+
+    .commitment-form input[type=text] {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    .commitment-form .ss-required-asterisk {
+      display:inline;
+    }
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -276,8 +296,14 @@ label {
       border-bottom: none;
       margin-bottom: 0;
     }
-}
 
+}
+@media only screen and (min-width: 1000px) {
+
+    nav li {
+      margin: 0 30px;
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
