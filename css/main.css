@@ -170,6 +170,12 @@ article {
 #gtclogo {
 	width: 180px;
   margin:2em 0;
+  display:none;
+}
+
+article.intro {
+  border-bottom: 2px solid #DDD;
+  margin-bottom: 2em;
 }
 
 .donate-container {
@@ -220,6 +226,7 @@ article {
     .oldie nav a {
         margin: 0 0.7%;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -243,6 +250,15 @@ article {
         width: 100%;
     }
 
+
+    #gtclogo {
+      display: block;
+    }
+
+    article.intro {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
 }
 
 /* ==========================================================================
@@ -471,3 +487,4 @@ article {
 .main h4 {
   margin-top:25px;
 }
+
