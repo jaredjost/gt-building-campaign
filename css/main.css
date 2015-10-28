@@ -96,7 +96,8 @@ nav a:hover {
     MOBILE: Main
    ============== */
 
-a {
+a,
+a:hover {
   color:#b2b2b2;
 }
 
@@ -145,7 +146,7 @@ article {
 
 .banner-container {
 	background-color: #EEE;
-	font: bold 25px serif;
+	/*font: bold 25px serif;*/
   margin-bottom: 1em;
   margin-top: 80px;
 }
@@ -195,6 +196,7 @@ article.intro {
 .donate-container>a {
   color:#333;
 }
+
 .commitment-form article .ss-q-title {
   display:block;
 }
@@ -478,8 +480,7 @@ label {
 }
 
 .vision-div h2,
-.vision-div span,
-.vision-div ol>li {
+.vision-div span {
 	text-transform: uppercase;
 	font-family: 'Montserret', sans-serif;
 	/*font-size:13pt;*/
@@ -580,4 +581,26 @@ label {
   border: 1px solid #CCC;
   padding:1em 2em;
   margin: 1em 0;
+}
+
+#secTable,
+#secTable tr {
+	border: 1px solid black;
+}
+
+#secTable td {
+	padding: 3px;
+}
+
+#secTable tr td:nth-child(2),
+#secTable tr td:nth-child(3) {
+	text-align: center;
+}
+
+#secTable p {
+	font-size: 10px;
+}
+
+#secTable thead {
+	background-color: #EFF6D1;
 }
