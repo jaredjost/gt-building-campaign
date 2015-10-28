@@ -96,7 +96,8 @@ nav a:hover {
     MOBILE: Main
    ============== */
 
-a {
+a,
+a:hover {
   color:#b2b2b2;
 }
 
@@ -195,6 +196,7 @@ article.intro {
 .donate-container>a {
   color:#333;
 }
+
 .commitment-form article .ss-q-title {
   display:block;
 }
