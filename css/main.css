@@ -223,6 +223,12 @@ label {
 .commitment-form .ss-required-asterisk {
   display:none;
 }
+
+.navbar-brand {
+  padding:0;
+  margin-top: -5px;
+  display: block;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -310,6 +316,10 @@ label {
     }
 .donate-container {
   margin: 73px 0;
+}
+
+.navbar-brand {
+  display: none;
 }
 }
 @media only screen and (min-width: 1000px) {
