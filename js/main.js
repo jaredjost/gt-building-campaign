@@ -72,23 +72,27 @@ Tumblr.RecentPosts = function(el, postsCount) {
     var date = '<span class="news-date">' + monthNames[post_date.getMonth()] + ' ' + post_date.getDate() + ', ' + post_date.getFullYear() + '</span><br /><br />'
 
     var title = post.title ? '<h3 style="text-transform:uppercase">' + post.title + '</h3>' : '';
-
     var media = "";
-    if(post.img || post.video || post.audio) {
+    if(post.img || post.videoplayer || post.audioplayer) {
       media += post.img ? '<img src="' + post.img + '" /><br />' : "";
-      media += post.video ? post.videoplayer : "";
-      media += post.audio ? post.audioplayer : "";
+      if(post.videoplayer){
+        var vid = post.videoplayer.replace(/\}\}\'\s\>/, "}}\' controls>");
+        media += vid;
+      }
+      media += post.audioplayer ? post.audioplayer : "";
       media += "<br />";
     }
 
     var body = "";
     body = post.body || post.quote || post.chat;
-    if(!body) {
-      body += post.lurl ? '<a href="' + post.lurl + '">' + post.link + '</a>' : "";
+    if(!body && post.lurl) {
+      body += '<a href="' + post.lurl + '">' + post.link + '</a>';
     }
-    body = body.split(' ', 50).join(' ') + '... ';
-
-    return '<p>' + date + title + media + body + '</p><span><a href="' + post.url + '" class="pull-right">READ MORE &#10095;</a></span>';
+    if(body !== undefined) {
+      body =  body.split(' ', 50).join(' ') + '... ';
+    }
+    console.log(media);
+    return '<p>' + date + (title || "") + (media || "") + (body || "") + '</p><span><a href="' + post.url + '" target="_blank" class="pull-right">READ MORE &#10095;</a></span>';
   };
 
   var postInfo = function(post) {
@@ -104,6 +108,7 @@ Tumblr.RecentPosts = function(el, postsCount) {
         lurl: post["link-url"],
         chat: post["conversation-text"],
         videoplayer: post["video-player"],
+        videosource: post["video-source"],
         audioplayer: post["audio-player"],
         date: post["date-gmt"]
       };
