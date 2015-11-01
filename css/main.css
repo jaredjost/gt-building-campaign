@@ -162,6 +162,10 @@ article {
   align-items:center;
 }
 
+/*.banner-container {
+  background-image: url('img/skyline.png');
+}*/
+
 .center-logo {
   width:250px;
   margin:1.5em 0;
@@ -196,7 +200,10 @@ article.intro {
   padding-top: 1em;
   text-align: left;
   padding-left: 1em;
-  font-size:10pt;
+  font-size:11pt;
+  border:none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
 }
 
 .donate-container>a {
@@ -305,7 +312,7 @@ label {
       margin-bottom: 0;
     }
 .donate-container {
-  margin: 75px 0;
+  margin: 73px 0;
 }
 }
 @media only screen and (min-width: 1000px) {
