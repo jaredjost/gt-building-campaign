@@ -74,7 +74,7 @@ nav ul {
 }
 
 nav li {
-	margin: 0 20px;
+	margin: 0 15px;
 	display: inline-block;
 }
 
@@ -178,19 +178,25 @@ article.intro {
   margin-bottom: 2em;
 }
 
+.commit-button {
+  padding: 1em;
+}
+
 .donate-container {
-  margin: 50px 0;
+  margin: 30px 0;
   vertical-align: middle;
   padding: 1em;
+    color: #b2b2b2;
+    font-family: 'Karla', sans-serif;
+    font-size:11pt;
 }
 
 .donate-container article {
   margin-top: 1em;
   padding-top: 1em;
-}
-
-.donate-container article:last-child {
-  font-size: 90%;
+  text-align: left;
+  padding-left: 1em;
+  font-size:10pt;
 }
 
 .donate-container>a {
@@ -298,7 +304,9 @@ label {
       border-bottom: none;
       margin-bottom: 0;
     }
-
+.donate-container {
+  margin: 80px 0;
+}
 }
 @media only screen and (min-width: 1000px) {
 
@@ -429,7 +437,7 @@ label {
 .navbar-default,
 .footer-container,
 .social-container,
-.donate-container {
+.commit-button {
     background-color: #EFF6D1;
     color: #b2b2b2;
     font-size:11pt;
