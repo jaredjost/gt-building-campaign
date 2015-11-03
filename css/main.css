@@ -182,9 +182,7 @@ article.intro {
   margin-bottom: 2em;
 }
 
-.commit-button {
-  padding: 1em;
-}
+
 
 .donate-container {
   margin: 30px 0;
@@ -196,7 +194,6 @@ article.intro {
 }
 
 .donate-container article {
-  margin-top: 1em;
   padding-top: 1em;
   text-align: left;
   padding-left: 1em;
@@ -225,6 +222,12 @@ label {
 
 .commitment-form .ss-required-asterisk {
   display:none;
+}
+
+.navbar-brand {
+  padding:0;
+  margin-top: -5px;
+  display: block;
 }
 /* ==========================================================================
    Media Queries
@@ -313,6 +316,10 @@ label {
     }
 .donate-container {
   margin: 73px 0;
+}
+
+.navbar-brand {
+  display: none;
 }
 }
 @media only screen and (min-width: 1000px) {
@@ -450,6 +457,11 @@ label {
     font-size:11pt;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
+}
+.commit-button {
+  padding: 1em;
+  line-height: 1em;
+  color:#000;
 }
 
 .social-container {
