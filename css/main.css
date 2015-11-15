@@ -163,7 +163,9 @@ article {
 }
 
 /*.banner-container {
-  background-image: url('img/skyline.png');
+  background-image: url('../img/skyline.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }*/
 
 .center-logo {
