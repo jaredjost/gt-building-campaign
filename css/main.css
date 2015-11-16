@@ -179,12 +179,11 @@ article {
   display:none;
 }
 
+/* Jared - was showing up as an extra divider line on mobile
 article.intro {
   border-bottom: 2px solid #DDD;
   margin-bottom: 2em;
-}
-
-
+}*/
 
 .donate-container {
   margin: 30px 0;
@@ -307,22 +306,24 @@ label {
         width: 100%;
     }
 
-
     #gtclogo {
       display: block;
     }
 
+/* Jared - removed
     article.intro {
       border-bottom: none;
       margin-bottom: 0;
     }
-.donate-container {
-  margin: 73px 0;
-}
+*/
 
-.navbar-brand {
-  display: none;
-}
+    .donate-container {
+      margin: 73px 0;
+    }
+
+    .navbar-brand {
+      display: none;
+    }
 }
 @media only screen and (min-width: 1000px) {
 
